@@ -41,6 +41,7 @@
 }
 .mybox-img{
     border-radius: 100px;
+
 }
 .font-weight-bold{
     color:white;
@@ -228,4 +229,7 @@ section{
 p{
     color: aliceblue; 
 
+}
+.mb-3{
+    margin: 0 0 -100px;
 }
