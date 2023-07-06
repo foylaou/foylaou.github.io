@@ -3,8 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="keyword" content="foy-code-blog,coding,foy">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Coding Step!</title>
+      <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="icon" type="image/icon" href="/IMG/icon.png">
     <!--自訂CSS link-->
     <link rel="stylesheet" type="text/css" href="CSS/style.css">
     <!--boxicon CSS link-->
@@ -15,52 +20,75 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
 </head>
 <body>
         <header>
-            <a herf="#" class="logo">Coding Start</a>
-            <ul class="navlist">
-                <li><a href="/index.html">首頁</a></li>
-                <li><a href="/about.html">關於我</a></li>
-                <li><a href="/Blog.html">學習日誌</a></li>
-                <li><a href="/contact.html">聯絡我</a></li>
-                <li><a href="/Myprj.html">成果和作品</a></li>
-                <li><a href="https://github.com/foylaou"><i class="ri-github-fill"></i>GitHub</a></li>
-                <li><a href="http://foynas.synology.me:8443/login" target="_blank"><i class="ri-code-box-fill"></i></i>  coding web</a></li>
+            <a herf="#" class="logo ud">Coding Start</a>
+            <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+            <button class="navbar-brand bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li><a class="nav-link zh" href="/index.html">首頁</a></li>
+                <li><a class="nav-link zh" href="/about.html">關於我</a></li>
+                <li><a class="nav-link zh" href="https://mycodingstp.blogspot.com/">學習日誌</a></li>
+                <li><a class="nav-link zh" href="/contact.html">聯絡我</a></li>
+                <li><a class="nav-link zh" href="/Myprj.html">成果和作品</a></li>
+                <li><a class="nav-link" href="https://github.com/foylaou"><i class="ri-github-fill"></i>GitHub</a></li>
+                <li><a class="nav-link" href="http://foynas.synology.me:8443/login" target="_blank"><i class="ri-code-box-fill"></i></i>  coding web</a></li>
             </ul>
-            <div class="bx bx-menu" id="menu-icon"></div>
+        </div>
+    </div>
+            </nav>
         </header>
-
         <section class="prj"><!--背景主題物動-->
             <div class="prj-text">
                 <h5></h5>
                 <h4></h4>
-                <h1> Let`s coding</h1>
-                <p></p>
-                <a href="#">Join us</a>
-                <a href="#" class="ctaa"><i class="ri-play-line"></i>How to Code</a>
+                <h1 id="code"></h1>
             </div>
-            <div>
-                <div class"coding-gif">
-                    <img src="/IMG/giphy.gif">
-                </div>
-            </div>
-
-
         </section>
-        <div class="icons">
-            <a href="#"><i class="ri-line-fill"></i></a>
-            <a href="#"><i class="ri-youtube-fill"></i></a>
-            <a href="#"><i class="ri-instagram-line"></i></i></a>
-        </div>
-        <div class="scroll-down">
-            <a href="#"><i class="ri-arrow-down-s-line"></i></a>
-        </div>
+        <section class="prj">
+            <div class="prj-test">
+                <h1 id="learn"></h1>
+            </div>
+        </section>
+</div>
         <!--scrollreval effect-->
         <script src="https://unpkg.com/scrollreveal"></script>
         <!--custom js link-->
         <script src="/JS/script.js"></script>
-
+        <!-- bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+        <!-- jquery JS -->
+        <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+        <!-- typeit -->
+        <script src="https://unpkg.com/typeit@8.7.0/dist/index.umd.js"></script>
+        <script>
+           new TypeIt('#code',{
+            strings:"Let`t coding.",
+            speed: 60,
+            waitUntilVisible:true,
+}).go();
+            new TypeIt('#learn',{
+                speed: 60,
+  startDelay: 1000,
+})
+  .type("Start from Javecript", { delay: 100 })
+  .move(-5, { delay: 100 })
+  .type("S", { delay: 400 })
+  .pause(200)
+  .move(+5, { delay: 100 })
+  .type('、HTML',{delay:100})
+  .pause(200)
+  .type('、CSS.',{delay:100})
+  .type('<br><br>',{delay:1000})
+  .type('Now learning Python'
+  ,{speed: 1000,}).go();
+        </script>
 </body>
 </html>
