@@ -39,8 +39,14 @@
     height: auto;
     margin: 0 0 -100px;
 }
+.myself{
+    width: 400px;
+    color: aliceblue;
+
+}
 .mybox-img{
     border-radius: 100px;
+
 
 }
 .font-weight-bold{
@@ -94,6 +100,7 @@ header{
     align-items: center;
     gap: 2rem;
 }
+
 section{
     padding: 0 19%;
 }
@@ -206,30 +213,130 @@ section{
     button{
         display:none;
     }
-
-    
 }
-@media (max-width:px) {
-    button{
-        display:none;
+@media (max-width:1460px){
+    section{
+        padding: 0 12;
+        transition: .2s;
+    }
+}
+@media (max-width:1340px){
+    .coding-gif img{
+        width: 100%;
+        height: auto;
+    }
+    .prj text h1{
+        font-size: 75px;
+        margin: 0 0 30px;
+    }
+    .prj text h5{
+        margin-bottom: 25px;
     }
 
-    
 }
-#learn{
-    font-size: 90px;
-    line-height: 1;
-    color: white;
-    margin:  0 0 60px;
+@media (max-width:1100px){
+    section{
+    padding: 0 3%;
+    transition: .2s;
+    }
+    .prj-text{
+        padding: 115px;
+    }
+    .coding-gif{
+        text-align: center;
+    }
+    .coding-gif img{
+        width: 560px;
+        height: auto;
+    }
+    .prj{
+        height: 100%;
+        gap: 1rem;
+        grid-template-columns: 1fr;
+    }
+    .icons{
+        display: none;
+    }
+    .scroll-down{
+        display: none;
+    }
 }
-.myself{
-    width: 600px;
-    font-size: 24px;
+@media (max-width:990px){
+    #menu-icon{
+        display: block;
+    }
+    .navlist{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 300px;
+        height: 40vh;
+        background: #282828;
+        align-items: center;
+        flex-direction: column;
+        padding: 50px 20px;
+        transition: all .55s ease;
+    }
+    .navlist a{
+        display: block;
+        margin: 10px 0;
+        margin-left: 0;
+    }
+    .navlist.open{
+        right: 0;
+    }
 }
-p{
-    color: aliceblue; 
+/* 在寬度小於990px時進行調整 */
+
+    /* 調整選單樣式 */
+    .navlist {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 300px;
+        height: 40vh;
+        background: #282828;
+        align-items: center;
+        flex-direction: column;
+        padding: 50px 20px;
+        transition: all .55s ease;
+    }
+    .navlist a {
+        display: block;
+        margin: 10px 0;
+        margin-left: 0;
+    }
+    .navlist.open {
+        right: 0;
+    }
+
+
+/* 在寬度小於680px時進行調整 */
+@media (max-width: 680px) {
+    /* 調整程式碼片段的圖片大小 */
+    .coding-gif img {
+        width: 100%;
+        height: auto;
+    }
+    /* 調整標題字型大小 */
+    .prj-text h1 {
+        font-size: 70px;
+    }
+    /* 調整選單圖示位置 */
+    .ri-play-line {
+        margin-top: 30px;
+    }
+}
+.footer{
+    background-color: #333;
+    height: 100px;
 
 }
-.mb-3{
-    margin: 0 0 -100px;
+.footer-menu a{
+    text-decoration: none;
+    color: #ffffff;
+    width: 60px;
+}
+#learn{
+    color:#ffffff;
 }
